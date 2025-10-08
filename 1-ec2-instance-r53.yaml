@@ -8,7 +8,7 @@
     zone_id : Z013386211R3NLCB52I8R
     domain_name : arunenjali.fun
   instances :
-    - mongodb
+  - mongodb
 
   tasks :
   - name : Creating the ec2 instance
@@ -18,10 +18,10 @@
       secuirty_group : "{{sg_id}}"
       image_id : "{{ami_id}}"
       tags :
-        environment : "{{item}}"
+        name : "{{item}}"
     loop : "{{instance}}"
     register : ec2_output
   
-  - name : printing the ec2_instance
+  - name : printing the ec2_instance output
     ansible.builtin.debug :
       msg : "{{ec2_output}}"
