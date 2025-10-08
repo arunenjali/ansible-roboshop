@@ -1,5 +1,5 @@
 - name : Creating the ec2 instance and R53 update
-  hosts : local
+  hosts : localhost
   connection : local
   become : yes
   vars:
