@@ -15,11 +15,11 @@
     amazon.aws.ec2_instance:
       name : "{{item}}"
       instance_type : t3.micro
-      secuirty_group : "{{sg_id}}"
+      security_group : "{{sg_id}}"
       image_id : "{{ami_id}}"
       tags :
         name : "{{item}}"
-    loop : "{{instance}}"
+    loop : "{{instances}}"
     register : ec2_output
   
   - name : printing the ec2_instance output
