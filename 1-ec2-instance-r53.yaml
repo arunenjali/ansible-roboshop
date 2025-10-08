@@ -1,7 +1,6 @@
 - name : Creating the ec2 instance and R53 update
-  hosts : localhost
+  hosts : local
   connection : local
-  become : yes
   vars:
     ami_id : ami-09c813fb71547fc4f
     sg_id : sg-088654339372a0863
@@ -10,7 +9,6 @@
     region: us-east-1 
     instances :
     - mongodb
-
   tasks :
   - name : Creating the ec2 instance
     amazon.aws.ec2_instance:
