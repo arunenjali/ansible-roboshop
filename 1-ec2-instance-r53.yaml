@@ -7,8 +7,8 @@
     sg_id : sg-088654339372a0863
     zone_id : Z013386211R3NLCB52I8R
     domain_name : arunenjali.fun
-  instances :
-  - mongodb
+    instances :
+    - mongodb
 
   tasks :
   - name : Creating the ec2 instance
